@@ -1,4 +1,5 @@
 ﻿using DogsSystem.Controller;
+using DogsSystem.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,6 +36,15 @@ namespace DogsSystem.View
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            Dog dog = new Dog();
+            dog.Name = txtName.Text;
+            dog.Age = txtAge.Text;
+            mainController.AddDog(dog);
+            RefreshTable();
         }
     }
 }
