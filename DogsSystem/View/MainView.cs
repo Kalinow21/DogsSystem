@@ -46,5 +46,15 @@ namespace DogsSystem.View
             mainController.AddDog(dog);
             RefreshTable();
         }
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = dgvDogs.CurrentRow;
+            int id = int.Parse(row.Cells[0].Value.ToString());
+            Dog dog = new Dog();
+            dog.Name = txtName.Text;
+            dog.Age = txtAge.Text;
+            mainController.UpdateDog(id, dog);
+            RefreshTable();
+        }
     }
 }

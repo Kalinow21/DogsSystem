@@ -29,6 +29,21 @@ namespace DogsSystem.Controller
             }
         }
 
+        public void UpdateDog(int id, Dog dog)
+        {
+            using (DogsDBEntities1 db = new DogsDBEntities1())
+            {
+                var dogToUpdate = db.Dogs.Where(g => g.Id == id).FirstOrDefault();
+                if (dogToUpdate != null)
+                {
+                    dogToUpdate.Id = id;
+                    dogToUpdate.Name = dog.Name;
+                    dogToUpdate.Age = dog.Age;
+                    db.SaveChanges();
+                }
+            }
+        }
+
 
     }
 }
