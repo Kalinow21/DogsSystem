@@ -56,5 +56,13 @@ namespace DogsSystem.View
             mainController.UpdateDog(id, dog);
             RefreshTable();
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = dgvDogs.CurrentRow;
+            int id = int.Parse(row.Cells[0].Value.ToString());
+            mainController.DeleteDog(id);
+            RefreshTable();
+        }
     }
 }
