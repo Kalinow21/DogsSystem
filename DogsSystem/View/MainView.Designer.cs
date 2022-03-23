@@ -31,6 +31,11 @@ namespace DogsSystem.View
         {
             this.components = new System.ComponentModel.Container();
             this.dgvDogs = new System.Windows.Forms.DataGridView();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblAge = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtAge = new System.Windows.Forms.TextBox();
+            this.btnCreate = new System.Windows.Forms.Button();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,9 +63,58 @@ namespace DogsSystem.View
             this.dgvDogs.DataSource = this.dogBindingSource3;
             this.dgvDogs.Location = new System.Drawing.Point(-1, 12);
             this.dgvDogs.Name = "dgvDogs";
-            this.dgvDogs.Size = new System.Drawing.Size(285, 134);
+            this.dgvDogs.Size = new System.Drawing.Size(316, 169);
             this.dgvDogs.TabIndex = 0;
             this.dgvDogs.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // lblName
+            // 
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(321, 21);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(129, 41);
+            this.lblName.TabIndex = 1;
+            this.lblName.Text = "Name";
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblAge
+            // 
+            this.lblAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAge.Location = new System.Drawing.Point(322, 78);
+            this.lblAge.Name = "lblAge";
+            this.lblAge.Size = new System.Drawing.Size(129, 41);
+            this.lblAge.TabIndex = 2;
+            this.lblAge.Text = "Age";
+            this.lblAge.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtName
+            // 
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(469, 23);
+            this.txtName.Multiline = true;
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(134, 39);
+            this.txtName.TabIndex = 3;
+            // 
+            // txtAge
+            // 
+            this.txtAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAge.Location = new System.Drawing.Point(470, 80);
+            this.txtAge.Multiline = true;
+            this.txtAge.Name = "txtAge";
+            this.txtAge.Size = new System.Drawing.Size(134, 39);
+            this.txtAge.TabIndex = 4;
+            // 
+            // btnCreate
+            // 
+            this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreate.Location = new System.Drawing.Point(615, 53);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(135, 40);
+            this.btnCreate.TabIndex = 5;
+            this.btnCreate.Text = "Create Dog";
+            this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -107,6 +161,11 @@ namespace DogsSystem.View
             this.BackgroundImage = global::DogsSystem.Properties.Resources.saasassasasa;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnCreate);
+            this.Controls.Add(this.txtAge);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.lblAge);
+            this.Controls.Add(this.lblName);
             this.Controls.Add(this.dgvDogs);
             this.Name = "MainView";
             this.Text = "MainView";
@@ -118,6 +177,7 @@ namespace DogsSystem.View
             ((System.ComponentModel.ISupportInitialize)(this.dogBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dogsDBEntities1BindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -131,5 +191,10 @@ namespace DogsSystem.View
         private System.Windows.Forms.DataGridViewTextBoxColumn ageDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource dogBindingSource3;
         private System.Windows.Forms.BindingSource dogsDBEntities1BindingSource;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblAge;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtAge;
+        private System.Windows.Forms.Button btnCreate;
     }
 }
