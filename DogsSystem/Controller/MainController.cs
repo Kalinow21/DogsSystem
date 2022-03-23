@@ -43,6 +43,19 @@ namespace DogsSystem.Controller
                 }
             }
         }
+        
+        public void DeleteDog(int id)
+        {
+            using (DogsDBEntities1 db = new DogsDBEntities1())
+            {
+                var dogToDelete = db.Dogs.Where(g => g.Id == id).FirstOrDefault();
+                if (dogToDelete != null)
+                {
+                    db.Dogs.Remove(dogToDelete);
+                    db.SaveChanges();
+                }
+            }
+        }
 
 
     }
